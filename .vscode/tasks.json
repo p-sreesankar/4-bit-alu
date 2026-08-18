@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run Verilator Simulation",
+            "type": "shell",
+            "command": "verilator -Wall --cc alu.v --exe tb_alu.cpp --trace && make -C obj_dir -f Valu.mk Valu && ./obj_dir/Valu",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "clear": true,
+                "panel": "shared"
+            }
+        }
+    ]
+}
